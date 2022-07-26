@@ -3,7 +3,7 @@ class SocialNetwork:
     def __init__(self):
         self.list_of_people = [] # this instance variable is initialized to an empty list when social network is created, 
                                  # you can save objects of people on the network in this list
-        
+    
     ## For more challenge try this
     def save_social_media(self):
         # function to save social media to a file on disk 
@@ -20,18 +20,34 @@ class SocialNetwork:
     def  create_account(self):
         #implement function that creates account here
         print("Creating ...")
-        pass
+        age=input("Type age: ") 
+        name=input("Type name: ")
+        created_account=Person (name,age)
 
+        self.list_of_people.append(created_account)
 
+        print(self.list_of_people)
 class Person:
     def __init__(self, name, age):
         self.id = name
         self.year = age
         self.friendlist = []
+    def edit_details(self):
+        new_name=print("Enter new name: ")
+        new_age=print("Enter new age: ")
+        self.id=new_name
+        self.year=new_age
 
     def add_friend(self, person_object):
+        self.friendlist.append(person_object)
         #implement adding friend. Hint add to self.friendlist
-        pass
+       
+    def block_friend(self, person_object):
+        self.friendlist.remove(person_object)
+
+    def view_friendlist(self):
+        for friend in self.friendlist: 
+            print(friend.id)
 
     def send_message(self):
         #implement sending message to friend here

@@ -1,4 +1,5 @@
 # You can implement user interface functions here.
+import social_network_ui 
 
 def mainMenu():
     print("")
@@ -14,5 +15,6 @@ def manageAccountMenu():
     print("2. Add a friend")
     print("3. View all my friends")
     print("4. View all my messages")
-    print("5. <- Go back ")
+    print("5. Block a friend")
+    print("6. <- Go back ")
     return input("Please Choose a number: ")
